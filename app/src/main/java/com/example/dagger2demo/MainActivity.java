@@ -6,15 +6,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dagger2demo.dagger.component.DaggerMainComponent;
-import com.example.dagger2demo.dagger.modules.MainModule;
 import com.example.dagger2demo.model.Student;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 
 public class MainActivity extends AppCompatActivity {
 
     @Inject Student student;
-    @Inject String string;
+    @Inject String mainModule;
+    @Named("secondModule")
+    @Inject String secondModule;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +26,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView textView = (TextView) findViewById(R.id.main_contentMain);
 
-        DaggerMainComponent.builder().mainModule(new MainModule()).build().inject(this);
+//        DaggerMainComponent.builder().mainModule(new MainModule()).build()(this);
 
-        textView.setText(student.toString() + "\n" + string);
-        Toast.makeText(this, string, Toast.LENGTH_SHORT).show();
+        DaggerMainComponent.getInstance().inject(this);
+
+
+        textView.setText(student.toString() + "\n" + mainModule);
+        Toast.makeText(this, secondModule, Toast.LENGTH_SHORT).show();
+
+
     }
 }
 
