@@ -2,11 +2,12 @@ package com.example.dagger2demo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatButton;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.dagger2demo.activities.BaseActivity;
 import com.example.dagger2demo.dagger.component.DaggerMainComponent;
 import com.example.dagger2demo.model.Student;
 import com.example.dagger2demo.mvp.SecondActivity;
@@ -18,7 +19,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Inject
     Student student;
@@ -49,9 +50,20 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick(R.id.main_click)
-    public void onClick() {
-        startActivity(new Intent(this, SecondActivity.class));
+    @OnClick({R.id.main_click, R.id.main_click2})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.main_click:
+                startActivity(new Intent(this, SecondActivity.class));
+                break;
+            case R.id.main_click2:
+                ConstructorInjectActivity.start(this);
+                break;
+            default:
+                break;
+        }
+
+
     }
 }
 

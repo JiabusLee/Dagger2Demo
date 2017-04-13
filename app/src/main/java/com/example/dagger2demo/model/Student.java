@@ -1,5 +1,7 @@
 package com.example.dagger2demo.model;
 
+import javax.inject.Inject;
+
 /**
  * Created by HERO on 2017/3/14.
  */
@@ -7,6 +9,10 @@ package com.example.dagger2demo.model;
 public class Student {
     private String name;
     private int age;
+
+    @Inject
+    public Student() {
+    }
 
     public String getName() {
         return name;

@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".mvp.SecondActivity" />
+        <activity android:name=".ConstructorInjectActivity" />
     </application>
 
 </manifest>

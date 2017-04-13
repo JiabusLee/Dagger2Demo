@@ -24,7 +24,6 @@ public abstract class MainComponent {
 
     public abstract void inject(MainActivity mainActivity);
 
-
     public abstract Student getStudent();
 
 
