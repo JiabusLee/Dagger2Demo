@@ -50,7 +50,7 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.main_click, R.id.main_click2})
+    @OnClick({R.id.main_click, R.id.main_click2, R.id.main_click3})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.main_click:
@@ -58,6 +58,9 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.main_click2:
                 ConstructorInjectActivity.start(this);
+                break;
+            case R.id.main_click3:
+                QualifierActivity.start(this);
                 break;
             default:
                 break;

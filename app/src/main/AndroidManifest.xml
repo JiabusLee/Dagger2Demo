@@ -24,6 +24,7 @@
         </activity>
         <activity android:name=".mvp.SecondActivity" />
         <activity android:name=".ConstructorInjectActivity" />
+        <activity android:name=".QualifierActivity" />
     </application>
 
 </manifest>
