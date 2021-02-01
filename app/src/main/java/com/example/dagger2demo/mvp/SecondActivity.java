@@ -3,7 +3,6 @@ package com.example.dagger2demo.mvp;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -11,6 +10,8 @@ import com.example.dagger2demo.DemoApplication;
 import com.example.dagger2demo.R;
 import com.example.dagger2demo.dagger.modules.GitHubModule;
 import com.example.dagger2demo.model.Repository;
+
+import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 
