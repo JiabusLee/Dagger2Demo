@@ -2,9 +2,10 @@ package com.example.dagger2demo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.AppCompatTextView;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatTextView;
 
 import com.example.dagger2demo.activities.BaseActivity;
 import com.example.dagger2demo.model.Teacher;

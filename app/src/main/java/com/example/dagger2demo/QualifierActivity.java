@@ -2,8 +2,9 @@ package com.example.dagger2demo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
 
 import com.example.dagger2demo.activities.BaseActivity;
 import com.example.dagger2demo.dagger.component.DaggerQualifierComponent;

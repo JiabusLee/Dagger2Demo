@@ -2,10 +2,11 @@ package com.example.dagger2demo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.AppCompatButton;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.widget.AppCompatButton;
 
 import com.example.dagger2demo.activities.BaseActivity;
 import com.example.dagger2demo.dagger.component.DaggerMainComponent;
